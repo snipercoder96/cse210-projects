@@ -7,11 +7,11 @@ class Program
 
         // Create Input for the user
         Console.Write("What is your first name? ");
-        string first_name = Console.ReadLine();
+        string firstName = Console.ReadLine();
         Console.Write("What is your last name? ");
-        string last_name = Console.ReadLine();
+        string lastName = Console.ReadLine();
 
         // Example of how Sting Interpolation is used
-        Console.Write($"Your name is {first_name}, {first_name} {last_name}.");
+        Console.Write($"Your name is {firstName}, {firstName} {lastName}.");
     }
 }
