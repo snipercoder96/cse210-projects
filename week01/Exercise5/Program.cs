@@ -2,9 +2,9 @@ using System;
 
 class Program
 {
-    static void Main(string[] args)
-    {   
-        // Remember if __name__ == "__main__"
+    static void Main(string[] args) // This is where the code is executed :)
+    {
+        // Remember if __name__ == "__main__" its the same
         DisplayWelcome();
         string name = PromptUserName();
         int number = PromptUserNumber();
@@ -44,6 +44,6 @@ class Program
     {
         Console.WriteLine($"{name}, the square of your number is {squaredNumber}");
     }
-        
+
 
 }
