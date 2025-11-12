@@ -17,7 +17,8 @@ class Program
         // Two parameters
         Fraction f3 = new Fraction(6, 7);
         Console.WriteLine(f3.GetFractionString());   
-        Console.WriteLine(f3.GetDecimalValue());     
+        // Restricting it to 2 decimal places
+        Console.WriteLine(Math.Round(f3.GetDecimalValue(), 2));     
 
 
 
