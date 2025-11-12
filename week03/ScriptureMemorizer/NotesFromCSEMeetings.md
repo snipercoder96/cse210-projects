@@ -76,4 +76,6 @@
 - Word -> A class for a Word will need a constructor as well. This constructor should accept the text of the word to save it as an attribute. 
 
 
+# A final picture of everything
+
 ![A final image of how the classes should look like](image.png)
