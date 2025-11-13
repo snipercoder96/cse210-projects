@@ -1,6 +1,9 @@
 using System;
 using System.IO;
 
+/* Exceeding requirements: Added mood in Entry, Journal class
+*/
+
 
 
 class JournalProgram
@@ -29,17 +32,21 @@ class JournalProgram
             }
 
             else if (user == 2)
-            {
+            {   
+                // Added Mood for exceeding requirements.
                 journal.DisplayAllEntries();
             }
 
             else if (user == 3)
-            {
+            {   
+                
                 Console.Write("What file would you like to save it as? ");
                 string filename = Console.ReadLine();
                 journal.SaveToFile(filename);
                 Console.WriteLine("Saving...");
                 Console.WriteLine("Saved successfully!");
+
+
             }
             else if (user == 4)
             {

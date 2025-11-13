@@ -4,7 +4,8 @@ using System.IO;
 
 class Journal
 {
-    private List<Entry> _entries = new List<Entry>();
+    public List<Entry> _entries = new List<Entry>();
+    private bool _mood = true;
 
     // This is for 
     public void AddEntry(Entry entry)
@@ -17,7 +18,7 @@ class Journal
     {
         foreach (Entry ent in _entries)
         {
-            ent.Display();
+            ent.Display(_mood);
         }
     }
 

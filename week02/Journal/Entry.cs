@@ -10,12 +10,12 @@ Exceeding Requirements:
 class Entry
 {
     // Reason for private is to avoid interference with changes
-    private string _date;
-    private string _promptText;
-    private string _entryText;
+    public string _date;
+    public string _promptText;
+    public string _entryText;
 
-    /* Added Mood for Exceeding requirements */
-    public string _mood { get; }
+
+    public string _mood;
 
     public Entry(string date, string mood, string promptText, string entryText)
     {
@@ -23,12 +23,11 @@ class Entry
         _mood = mood;
         _promptText = promptText;
         _entryText = entryText;
-
     }
 
-    public void Display(bool showMood = false)
+    public void Display(bool ShowMood)
     {
-        if (showMood == true)
+        if (ShowMood == true)
         {
             Console.WriteLine($"Date: {_date} \nMood: {_mood} \nPrompt: {_promptText} \nResponse: {_entryText}\n");
         }

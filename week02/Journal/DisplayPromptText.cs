@@ -35,11 +35,38 @@ class DisplayPromptText
         Console.WriteLine("What is your response:\n");
         string response = Console.ReadLine();
 
+        // Added Mood
+        List<string> moods = new List<string>
+        {
+            "happy",
+            "sad",
+            "concerned",
+            "troubled",
+            "take a look"
+        };
+        Console.WriteLine("\nChoose from these list:");
+        Console.WriteLine("- Happy \n- Sad \n- Concerned \n- Troubled \n- Take a look");
         Console.Write("What is your mood today? ");
-        string mood = Console.ReadLine();
+        string mood = Console.ReadLine().ToLower();
 
-        string date = DateTime.Now.ToString("yyyy-MM-dd");
+        while (true)
+        {
+            if (moods.Contains(mood))
+            {   
+                string date = DateTime.Now.ToString("yyyy-MM-dd");
+                return new Entry(date, mood, prompt, response);
+            }
 
-        return new Entry(date, mood, prompt, response);
+            else
+            {
+                Console.WriteLine("Choose from the list above");
+                continue;
+            }
+        }
+        
+
+
+
+        
     }
 }
