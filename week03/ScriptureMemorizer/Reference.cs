@@ -1,4 +1,4 @@
-class Reference 
+class Reference
 {
     // Create Member variables (Encapsulate them!)
     private string _book;
@@ -27,15 +27,15 @@ class Reference
 
     // Access Modifiers can be accessed in this line:
     public string GetDisplayText()
-    {  
+    {
         if (_verse > 0 && _endVerse == 0)
         {
-            return $"{_book} {_chapter}:{_verse}"
+            return $"{_book} {_chapter}:{_verse}";
         }
         else
         {
-            return $"{_book} {_chapter}:{_verse}-{_endVerse}"
+            return $"{_book} {_chapter}:{_verse}-{_endVerse}";
         }
-       
+
     }
 }
