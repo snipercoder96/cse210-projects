@@ -5,7 +5,6 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello World! This is the OnlineOrdering Project.");
 
         // Testing procedure
         Address usaAddress = new Address("123 Long Street", "Springfield", "IL", "USA");
