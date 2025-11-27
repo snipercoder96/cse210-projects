@@ -7,17 +7,42 @@ class Program
         // TEsting procedure
 
         Assignment assignment = new Assignment("Samuel Bennett", "Multiplication");
-        Console.WriteLine(assignment.GetSummary());
-
-        // Testing Procedure
         MathAssignment math = new MathAssignment("Roberto Rodriguez", "Fractions", "7.3", "8-19");
+        WritingAssignment writing = new WritingAssignment("Mary Waters", "European History", "The Causes of World War II");
+
+        List<string> animationBack = new List<string>
+        {
+                "|", "/", "-", "\\", "|", "/", "-", "\\", "|"
+        };
+
+        Console.Write("Please wait ");
+        Thread.Sleep(2000);
+        Console.Clear();
+        foreach (string animations in animationBack)
+        {
+            Console.Write(animations);
+            Thread.Sleep(1000);
+            Console.Write("\b \b");
+        }
+        Console.WriteLine("\nIts Ready\n");
+        Console.WriteLine(assignment.GetSummary());
         Console.WriteLine(math.GetSummary());
         Console.WriteLine(math.GetHomeworkList());
+        Console.WriteLine(writing.GetSummary());
+        Console.WriteLine(writing.GetWritingInformation());
+
+        DateTime startTime = DateTime.Now;
+        Console.WriteLine(startTime);
+        // animations 
+
+
+        // Testing Procedure
+
+
 
         // Testing procedure
 
-        WritingAssignment writing = new WritingAssignment("Mary Waters", "European History", "The Causes of World War II");
-        Console.WriteLine(writing.GetSummary());
-        Console.WriteLine(writing.GetWritingInformation());
+
+
     }
 }
