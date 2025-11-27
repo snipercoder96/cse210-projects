@@ -17,13 +17,14 @@ class Program
 
         Console.Write("Please wait ");
         Thread.Sleep(2000);
-        Console.Clear();
+
         foreach (string animations in animationBack)
         {
             Console.Write(animations);
             Thread.Sleep(1000);
             Console.Write("\b \b");
         }
+        Console.Clear();
         Console.WriteLine("\nIts Ready\n");
         Console.WriteLine(assignment.GetSummary());
         Console.WriteLine(math.GetSummary());
