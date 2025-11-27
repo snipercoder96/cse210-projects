@@ -12,7 +12,7 @@ class Program
 
         List<string> animationBack = new List<string>
         {
-                "|", "/", "-", "\\", "|", "/", "-", "\\", "|"
+            "|", "/", "-", "\\", "|", "/", "-", "\\", "|"
         };
 
         Console.Write("Please wait ");
