@@ -1,5 +1,10 @@
 using System;
 
+/*Exceeding requirements:
+→ Add to list of activities for saving and loading of files
+→ Added two menus
+ */
+
 class Program
 {
     static void Main(string[] args)
@@ -10,6 +15,7 @@ class Program
         while (running)
         {
             // Show menu from Activity base class
+            List<Activity> activities = new List<Activity>();
             Activity menu = new Activity("Menu", "Main menu", 0);
             menu.DisplayStartingMessage();
 
@@ -26,6 +32,7 @@ class Program
                     BreathingActivity breathing = new BreathingActivity("Breathing",
                     "This activity will help you relax by walking your through breathing in and out slowly. Clear your mind and focus on your breathing.", 0);
                     breathing.Run();
+                    activities.Add(breathing);
                     break;
 
                 case 2:
@@ -41,6 +48,7 @@ class Program
                         }  // questions
                     );
                     reflecting.Run();
+                    activities.Add(reflecting);
                     break;
 
                 case 3:
@@ -50,9 +58,27 @@ class Program
                         0
                     );
                     listing.Run();
+                    activities.Add(listing);
                     break;
 
                 case 4:
+                    Console.WriteLine("What file would you like to save it as... ");
+                    string saveFile = Console.ReadLine();
+
+                    Activity saver = new Activity("Saver", "Handles saving", 0);
+                    saver.SaveActivity(saveFile, activities);
+                    break;
+
+
+                case 5:
+                    Console.WriteLine("Enter the filename to load activities from... ");
+                    string loadFile = Console.ReadLine();
+                    
+                    Activity loader = new Activity("Loader", "Handles loading", 0);
+                    loader.LoadFromFile(loadFile, activities);
+                    break;
+
+                case 6:
                     Console.WriteLine("Goodbye!");
                     running = false;
                     break;
@@ -60,6 +86,9 @@ class Program
                 default:
                     Console.WriteLine("Invalid choice. Please choose carefully.");
                     break;
+
+
+
             }
 
             Console.WriteLine("\nPress Enter to return to the menu...");
